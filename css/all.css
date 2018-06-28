@@ -79,6 +79,51 @@ img {
     font-size: 20px;
     line-height: 60px;
     color: #fff; }
+  .header .icon {
+    float: right;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+    display: none; }
+  .header .hamburger {
+    width: 50px;
+    height: 6px;
+    border-radius: 25px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .header .hamburger:before,
+  .header .hamburger:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    border-radius: 25px;
+    background: #fff;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .header .hamburger:before {
+    top: -16px; }
+  .header .hamburger:after {
+    top: 16px; }
+  .header .icon.active .hamburger {
+    background: rgba(0, 0, 0, 0); }
+  .header .icon.active .hamburger:before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .header .icon.active .hamburger:after {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
   .header .nav {
     float: right; }
     .header .nav ul li {
@@ -93,56 +138,27 @@ img {
       .header .nav ul li a {
         color: #fff;
         font-weight: 600; }
-        .icon{
-          float: right;
-          width: 80px;
-          height: 60px;
-          cursor:pointer;
-          position: relative;
-          display: none;
-        }
-        
-        .hamburger{
-          width: 50px;
-          height: 6px;
-          border-radius: 25px;
-          background:#fff;
-          position: absolute;
-          top:50%;
-          left:20%;
-          transition:.5s;
-        }
-        
-        .hamburger:before,
-        .hamburger:after{
-          content:'';
-          position: absolute;
-          width: 50px;
-          height: 6px;
-          border-radius: 25px;
-          background:#fff;
-          transition:.5s;
-        }
-        
-        .hamburger:before{
-          top:-16px;
-        }
-        
-        .hamburger:after{
-          top:16px;
-        }
-        
-        .icon.active .hamburger{
-          background:rgba(0,0,0,0);
-         
-        }
-        
-        .icon.active .hamburger:before{
-          top:0;
-          transform:rotate(45deg);
-        }
-        
-        .icon.active .hamburger:after{
-          top:0;
-          transform:rotate(135deg);
-        }
+
+@media (max-width: 569px) {
+  .header {
+    padding: 0 20px; }
+    .header .icon {
+      display: block;
+      left: 16px; }
+    .header .nav.active {
+      right: 0; }
+    .header .nav {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      background: #333;
+      top: 60px;
+      right: -100%;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+      .header .nav ul {
+        display: block;
+        text-align: center; }
+        .header .nav ul li {
+          float: none; } }
