@@ -72,7 +72,8 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0px 2px 2px #888;
   box-shadow: 0px 2px 2px #888;
-  position: fixed; }
+  position: fixed;
+  z-index: 999; }
   .header .logo {
     float: left;
     font-weight: bold;
